@@ -1,0 +1,115 @@
+.banner {
+  position: relative;
+  padding: 2.5rem 1.5rem 1.5rem;
+  text-align: center;
+  overflow: hidden;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #6b1428 0px,
+      #8b1838 2px,
+      #7a1530 4px
+    );
+  border-bottom: 2px solid rgba(139, 24, 56, 0.5);
+}
+
+.banner::before,
+.banner::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  width: 60%;
+  height: 120%;
+  opacity: 0.5;
+  pointer-events: none;
+}
+.banner::before {
+  left: -20%;
+  background: radial-gradient(
+    ellipse 80% 60% at 30% 20%,
+    rgba(255, 200, 120, 0.5) 0%,
+    rgba(255, 180, 80, 0.2) 40%,
+    transparent 70%
+  );
+}
+.banner::after {
+  right: -20%;
+  background: radial-gradient(
+    ellipse 80% 60% at 70% 20%,
+    rgba(255, 200, 120, 0.5) 0%,
+    rgba(255, 180, 80, 0.2) 40%,
+    transparent 70%
+  );
+}
+
+.banner__marquee {
+  position: relative;
+  display: inline-block;
+  padding: 14px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, #9b2038 0%, #7a1530 50%, #6b1428 100%);
+  clip-path: polygon(
+    8% 0%, 92% 0%, 100% 15%, 100% 85%, 92% 100%, 8% 100%, 0% 85%, 0% 15%
+  );
+  box-shadow:
+    inset 0 2px 4px rgba(255, 255, 255, 0.1),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.3),
+    0 0 0 2px rgba(255, 180, 80, 0.4),
+    0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.banner__marquee::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 20px;
+  background: transparent;
+  box-shadow: 0 0 12px 2px rgba(255, 180, 80, 0.3);
+  pointer-events: none;
+}
+
+.banner__marquee-inner {
+  padding: 1.25rem 2rem;
+  background: linear-gradient(180deg, #f5eed8 0%, #e8e0c8 50%, #ddd5be 100%);
+  clip-path: polygon(
+    6% 0%, 94% 0%, 100% 12%, 100% 88%, 94% 100%, 6% 100%, 0% 88%, 0% 12%
+  );
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(139, 24, 56, 0.12);
+}
+
+.banner__brand {
+  display: block;
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 600;
+  color: #5c2a2a;
+  margin: 0.25rem 0;
+}
+
+.banner__now {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(0.75rem, 2vw, 0.9rem);
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: #4a2020;
+  margin: 0;
+}
+
+.banner__title {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #4a2020;
+  margin: 0 0 0.5rem;
+}
+
+.banner__desc {
+  display: block;
+  font-size: 0.75rem;
+  color: #6b5048;
+  font-weight: 400;
+}

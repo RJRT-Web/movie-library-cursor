@@ -1,0 +1,28 @@
+.favorites-page {
+  padding: 0;
+}
+
+.favorites-page__title {
+  margin: 0 0 0.25rem;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 1.5rem;
+  color: #f5f0e8;
+}
+
+.favorites-page__count {
+  margin: 0 0 1.5rem;
+  font-size: 0.875rem;
+  color: rgba(212, 175, 55, 0.7);
+}
+
+.favorites-page__empty {
+  text-align: center;
+  padding: 4rem 2rem 0;
+  color: rgba(212, 175, 55, 0.5);
+}
+
+.favorites-page__desc {
+  text-align: center;
+  padding: 0 2rem 4rem;
+  color: rgba(212, 175, 55, 0.5);
+}
