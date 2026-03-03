@@ -27,7 +27,7 @@ function MovieCard({ movie, isFavorite, onFavoriteClick }: MovieCardProps) {
           />
         ) : (
           <div className="movie-card__poster movie-card__poster--placeholder">
-            <span>No poster</span>
+            <p>No poster</p>
           </div>
         )}
         <div className="movie-card__overlay">
@@ -52,7 +52,7 @@ function MovieCard({ movie, isFavorite, onFavoriteClick }: MovieCardProps) {
       </div>
       <div className="movie-card__info">
         <h3 className="movie-card__title">{movie.title}</h3>
-        <span className="movie-card__year">{releaseYear}</span>
+        <p className="movie-card__year">{releaseYear}</p>
       </div>
     </article>
   );

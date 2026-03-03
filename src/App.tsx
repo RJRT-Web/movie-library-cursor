@@ -92,7 +92,21 @@ function App() {
             {page === 'favorites' ? (
               <FavoritesPage />
             ) : (
-              <>
+              <div className="app__page-content">
+                <h2 className="app__page-title">
+                  {searchQuery.trim()
+                    ? 'Search Results'
+                    : sort === 'rating'
+                      ? 'Top Rated Movies'
+                      : sort === 'release_date'
+                        ? 'Newest Releases'
+                        : 'Popular Movies'}
+                </h2>
+                {!loading && !error && (
+                  <p className="app__page-count">
+                    {displayMovies.length} movie{displayMovies.length !== 1 ? 's' : ''}
+                  </p>
+                )}
                 {loading && (
                   <div className="app__loading" aria-live="polite">
                     <div className="app__spinner" />
@@ -114,7 +128,7 @@ function App() {
                 {!loading && !error && displayMovies.length === 0 && (
                   <p className="app__empty">No movies found.</p>
                 )}
-              </>
+              </div>
             )}
           </div>
         </main>
